@@ -11,7 +11,7 @@ export function Footer() {
               <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">RT</span>
               </div>
-             <span className="ml-2 text-xl font-semibold text-white">山科智控传感有限公司</span>
+             <span className="ml-2 text-xl font-semibold text-white">新公司名称待确认</span>
             </div>
             <p className="text-gray-400 mb-4">
               专注于提供高质量的技术解决方案和产品，为客户创造最大价值。
@@ -76,7 +76,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-gray-800 pt-6 mt-6 text-center text-gray-500 text-sm">
-            <p>© {new Date().getFullYear()} 山科智控传感有限公司 Shanke Intellisensing Co., Ltd. 保留所有权利。</p>
+            <p>© {new Date().getFullYear()} 新公司名称待确认 Shanke Intellisensing Co., Ltd. 保留所有权利。</p>
         </div>
       </div>
     </footer>
