@@ -31,6 +31,7 @@ export default function App() {
     <AuthContext.Provider
       value={{ isAuthenticated, setIsAuthenticated, logout }}
     >
+      {/* 移除了外部的 Routes 组件 */}
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
