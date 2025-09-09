@@ -26,13 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'pnpm'
+          cache: 'pnpm' # 设置 pnpm 缓存
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Install pnpm
+        run: npm install -g pnpm@latest # 明确安装 pnpm
+
+      - name: Verify pnpm installation
+        run: pnpm --version # 验证 pnpm 是否安装成功
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile # 使用冻结的 lockfile 确保一致性
 
       - name: Build with Vite
         run: pnpm run build
