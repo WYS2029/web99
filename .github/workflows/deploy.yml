@@ -10,39 +10,41 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 使用 pnpm 官方 Action 设置 pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+
+      # 设置 Node.js 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'pnpm' # 设置 pnpm 缓存
+          cache: 'pnpm'
 
-      - name: Install pnpm
-        run: npm install -g pnpm@latest # 明确安装 pnpm
-
-      - name: Verify pnpm installation
-        run: pnpm --version # 验证 pnpm 是否安装成功
-
+      # 安装依赖
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile # 使用冻结的 lockfile 确保一致性
+        run: pnpm install
 
-      - name: Build with Vite
+      # 构建项目
+      - name: Build project
         run: pnpm run build
 
+      # 设置 Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      # 上传构建产物
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
