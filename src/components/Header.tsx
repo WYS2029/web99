@@ -29,7 +29,7 @@ export function Header() {
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">RT</span>
             </div>
-           <span className="ml-2 text-xl font-semibold text-gray-900">山科智控传感有限公司</span>
+           <span className="ml-2 text-xl font-semibold text-gray-900">新公司名称待确认</span>
           </Link>
           
           {/* Desktop Navigation */}
