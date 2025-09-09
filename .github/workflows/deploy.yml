@@ -39,6 +39,13 @@ jobs:
       # 构建项目
       - name: Build project
         run: pnpm run build
+             
+      - name: List built files
+        run: ls -la ./dist/
+      # 在 Build project 步骤后添加
+      - name: Create 404.html for SPA routing
+        run: |
+          cp ./dist/index.html ./dist/404.html
 
       # 设置 Pages
       - name: Setup Pages
