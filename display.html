@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>姜教授和山科咨询中心的合资公司</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        
+        body {
+            font-family: 'Inter', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #1e40af;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1e40af;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #1e40af;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: a2;
+        }
+        
+        .hero .btn {
+            display: inline-block;
+            background-color: white;
+            color: #1e40af;
+            padding: a1px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+            
+        }
+        
+        .hero .btn:hover {
+            transform: translateY(-5px);
+        }
+        
+        .hero-bg {
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10a%;
+            height: 100%;
+            opacity: 0.1;
+        }
+        
+        .hero-bg div {
+            position: absolute;
+            border-radius: a50%;
+            background-color: white;
+        }
+        
+        .hero-bg .circle1 {
+            width: a300px;
+            height: 300px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .hero-bg .circlea2 {
+            width: 200px;
+            height: a200px;
+            bottom: -50px;
+            left: 100px;
+        }
+        
+        /* Company Info Section */
+        .company-info {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: a60px;
+        }
+        
+        .section-header h2 {
+            font-size: a36px;
+            color: #1e40af;
+            margin-bottom: 10px;
+            
+        }
+        
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: a3apx;
+        }
+        
+        .info-card {
+            background-color: #f9fafb;
+            border-radius: 10px;
+            padding: 30px;
+            
+            box-shadow: 0 5px 15px rgba(0a, 0, 0, 0.aa5);
+            
+            transition: transform 0.3s;
+            
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-card .icon {
+            width: a60px;
+            
+            height: a60px;
+            
+            background-color: #dbeafe;
+            border-radius: 10px;
+            display: flex;
+            
+            align-items: center;
+            
+            justify-content: center;
+            
+            margin-bottom: a20px;
+            
+            color: #1e40af;
+            
+            font-size: 24px;
+            
+        }
+        
+        .info-card h3 {
+            font-size: a24px;
+            
+            margin-bottom: 15px;
+            
+            color: #333;
+            
+        }
+        
+        .info-card pa {
+            color: #666;
+            
+            margin-bottom: a20px;
+            
+        }
+        
+        .info-card .info-item {
+            display: flex;
+            
+            align-items: center;
+            
+            margin-bottom: 10px;
+            
+        }
+        
+        .info-card .info-item i {
+            color: #1e40af;
+            
+            margin-right: 10px;
+            
+        }
+        
+        /* Products Section */
+        .products {
+            padding: a8a0px 0;
+            
+            background-color: #f9fafb;
+            
+        }
+        
+        .products-grid {
+            display: grid;
+            
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            
+            gap: 30px;
+            
+        }
+        
+        .product-card {
+            background-color: white;
+            
+            border-radius: 10px;
+            
+            overflow: hidden;
+            
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            
+            transition: transform 0.3s;
+            
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            
+        }
+        
+        .product-card img {
+            width: 100%;
+            
+            height: 200px;
+            
+            object-fit: cover;
+            
+        }
+        
+        .product-card .product-info {
+            padding: 20px;
+            
+        }
+        
+        .product-card .category {
+            display: inline-block;
+            
+            background-color: #dbeafe;
+            
+            color: #1e40af;
+            
+            padding: 5px 10px;
+            
+            border-radius: 20px;
+            
+            font-size: 14px;
+            
+            margin-bottom: 10px;
+            
+        }
+        
+        .product-card h3 {
+            font-size: 20px;
+            
+            margin-bottom: 10px;
+            
+        }
+        
+        .product-card ul {
+            margin-bottom: 20px;
+            
+            padding-left: 20px;
+            
+        }
+        
+        .product-card ul li {
+            margin-bottom: 5px;
+            
+            color: #666;
+            
+        }
+        
+        .product-card .btn {
+            display: inline-block;
+            
+            color: #1e40af;
+            
+            font-weight: bold;
+            
+            text-decoration: none;
+            
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            
+            background-color: white;
+            
+        }
+        
+        .contact-container {
+            display: grid;
+            
+            grid-template-columns: 1fr 1fr;
+            
+            gap: 60px;
+            
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            
+            margin-bottom: 30px;
+            
+            color: #1e40af;
+            
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+            
+        }
+        
+        .contact-item {
+            display: flex;
+            
+            align-items: flex-start;
+            
+            margin-bottom: 20px;
+            
+        }
+        
+        .contact-item .icon {
+            width: 40px;
+            
+            height: 40px;
+            
+            background-color: #dbeafe;
+            
+            border-radius: 50%;
+            
+            display: flex;
+            
+            align-items: center;
+            
+            justify-content: center;
+            
+            color: #1e40af;
+            
+            margin-right: 15px;
+            
+            flex-shrink: 0;
+            
+        }
+        
+        .contact-item .info h4 {
+            font-size: 18px;
+            
+            margin-bottom: 5px;
+            
+        }
+        
+        .contact-item .info p {
+            color: #666;
+            
+        }
+        
+        .contact-form {
+            background-color: #f9fafb;
+            
+            padding: 30px;
+            
+            border-radius: 10px;
+            
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            
+        }
+        
+        .contact-form h3 {
+            font-size: 24px;
+            
+            margin-bottom: 20px;
+            
+            color: #1e40af;
+            
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            
+        }
+        
+        .form-group label {
+            display: block;
+            
+            margin-bottom: 8px;
+            
+            font-weight: 500;
+            
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            
+            padding: 12px 15px;
+            
+            border: 1px solid #ddd;
+            
+            border-radius: 5px;
+            
+            font-size: 16px;
+            
+        }
+        
+        .form-group textarea {
+            
+            min-height: 150px;
+            
+            resize: vertical;
+            
+        }
+        
+        .contact-form .btn {
+            display: inline-block;
+            
+            background-color: #1e40af;
+            
+            color: white;
+            
+            padding: 12px 30px;
+            
+            border: none;
+            
+            border-radius: 5px;
+            
+            font-weight: bold;
+            
+            cursor: pointer;
+            
+            transition: background-color 0.3s;
+            
+        }
+        
+        .contact-form .btn:hover {
+            background-color: #1e3a8a;
+            
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e40af;
+            
+            color: white;
+            
+            padding: 60px 0 20px;
+            
+        }
+        
+        .footer-content {
+            display: grid;
+            
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            
+            gap: 30px;
+            
+            margin-bottom: 40px;
+            
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            
+            margin-bottom: 20px;
+            
+            position: relative;
+            
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            
+            position: absolute;
+            
+            bottom: -10px;
+            
+            left: 0;
+            
+            width: 40px;
+            
+            height: 3px;
+            
+            background-color: white;
+            
+            border-radius: 3px;
+            
+        }
+        
+        .footer-col p {
+            margin-bottom: 20px;
+            
+            opacity: 0.8;
+            
+        }
+        
+        .social-links {
+            display: flex;
+            
+            gap: 15px;
+            
+        }
+        
+        .social-links a {
+            display: flex;
+            
+            align-items: center;
+            
+            justify-content: center;
+            
+            width: 40px;
+            
+            height: 40px;
+            
+            border-radius: 50%;
+            
+            background-color: rgba(255, 255, 255, 0.2);
+            
+            color: white;
+            
+            transition: background-color 0.3s;
+            
+        }
+        
+        .social-links a:hover {
+            background-color: white;
+            
+            color: #1e40af;
+            
+        }
+        
+        .footer-col ul {
+            list-style: none;
+            
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+            
+        }
+        
+        .footer-col ul li a {
+            color: white;
+            
+            text-decoration: none;
+            
+            opacity: 0.8;
+            
+            transition: opacity 0.3s;
+            
+        }
+        
+        .footer-col ul li a:hover {
+            opacity: 1;
+            
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            
+            padding-top: 20px;
+            
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            
+            font-size: 14px;
+            
+            opacity: 0.8;
+            
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                
+                gap: 15px;
+                
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                
+                justify-content: center;
+                
+            }
+            
+            nav ul li {
+                margin: 0 10px 10px;
+                
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+                
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                
+            }
+            
+        }
+        
+        @media (max-width: 576px) {
+            .section-header h2 {
+                font-size: 28px;
+                
+            }
+            
+            .hero {
+                padding: 60px 0;
+                
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+                
+            }
+            
+            .company-info,
+            .products,
+            .contact {
+                padding: 60px 0;
+                
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">RT</div>
+  <div class="logo-text">山科智控传感有限公司</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">公司简介</a></li>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#contact">联系方式</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>智能科技，驱动未来工业</h1>
+            <p>成为全球领先的工业自动化解决方案提供商，通过技术创新推动产业升级</p>
+            <a href="#contact" class="btn">联系我们</a>
+        </div>
+        <div class="hero-bg">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+    </section>
+    
+    <!-- Company Info Section -->
+    <section class="company-info" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>关于我们</h2>
+                <p>专注于工业自动化和智能控制领域的高新技术企业</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3>公司简介</h3>
+                    <p>姜教授和山科咨询中心的合资公司是一家专注于工业自动化和智能控制领域的高新技术企业。公司致力于为各行业提供先进的自动化控制系统、智能传感器和物联网解决方案。</p>
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-alt"></i>
+                        <span>成立时间: 2025年</span>                    
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3>企业使命</h3>
+                    <p>为客户创造价值，为员工创造机会，为社会创造财富</p>                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>核心价值观: 创新、品质、服务</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                    </div>
+                    <h3>联系信息</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-map-pin"></i>
+                        <span>山东省济南市历下区经十路17923号创新大厦</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>                        
+                        <span>18121215738</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@rudeertek.com</span>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>产品中心</h2>
+                <p>我们提供全面的工业自动化解决方案，满足不同行业需求</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://lf-code-agent.coze.cn/obj/x-ai-cn/299923892738/attachment/产品图片新_20250826095830.png" alt="紧凑型1310波段光谱仪">
+                    <div class="product-info">
+                        <span class="category">光谱分析仪器</span>
+                        <h3>紧凑型1310波段光谱仪</h3>
+                        <ul>
+                            <li>高性能1310nm波段光谱检测</li>
+                            <li>优于0.35nm的高分辨率</li>
+                            <li>>3kHz的高速数据采集频率</li>
+                            <li>紧凑设计，体积仅154×91×41mm</li>
+                        </ul>
+                        <a href="#" class="btn">了解更多 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://lf-code-agent.coze.cn/obj/x-ai-cn/299923892738/attachment/晶圆测厚仪参数_20250826101655.png" alt="晶圆测厚仪器">
+                    <div class="product-info">
+                        <span class="category">光纤光谱膜厚检测仪</span>
+                        <h3>晶圆测厚仪器</h3>
+                        <ul>
+                            <li>2μm至450μm宽测量范围</li>
+                            <li>优于6KHz的高速测量速率</li>
+                            <li>优于0.5μm的测量准确度</li>
+                            <li>无接触薄膜厚度在线监测</li>
+                        </ul>
+                        <a href="#" class="btn">了解更多 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="product-card">
+            <img src="https://lf-code-agent.coze.cn/obj/x-ai-cn/299923892738/attachment/image_20250905095532.png" alt="荧光光纤测温传感器">
+            <div class="product-info">
+                <span class="category">荧光光纤测温器</span>
+                <h3>荧光光纤测温传感器</h3>
+                <ul>
+                    <li>基于荧光寿命衰减原理的高精度温度监测</li>
+                    <li>天然电绝缘、抗电磁干扰、耐腐蚀</li>
+                    <li>非接触、高精度、实时在线监测</li>
+                    <li>多通道同步监测，支持12个测点同时采集</li>
+                </ul>
+                <a href="#" class="btn">了解更多 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://lf-code-agent.coze.cn/obj/x-ai-cn/299923892738/attachment/image_20250905095546.png" alt="LoRa无线智能温振复合传感器">
+            <div class="product-info">
+                <span class="category">温振传感器</span>
+                <h3>LoRa无线智能温振复合传感器</h3>
+                <ul>
+                    <li>振动与温度监测于一体的智能感知设备</li>
+                    <li>采用LoRa无线通信技术，低功耗设计</li>
+                    <li>集成多轴振动传感与高精度温度测量</li>
+                    <li>边缘计算能力，本地特征提取与故障预警</li>
+                </ul>
+                <a href="#" class="btn">了解更多 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>联系我们</h2>
+                <p>无论您有任何问题或需求，我们的团队都将竭诚为您提供帮助和支持</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info">
+                                <h4>公司地址</h4>
+                                <p>山东省济南市历下区经十路17923号创新大厦</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="info">
+                                <h4>联系电话</h4>
+                                <p>18121215738</p>
+                                <p>周一至周五: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">                        
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="info">
+                                <h4>电子邮箱</h4>
+                                 <p>info@shanke-intellisensing.com</p>
+                                 <p>support@shanke-intellisensing.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-weixin"></i></a>
+                        <a href="#"><i class="fa-brands fa-weibo"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>发送留言</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱 *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">主题 *</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容 *</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <p>姜教授和山科咨询中心的合资公司是一家专注于工业自动化和智能控制领域的高新技术企业。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-weixin"></i></a>
+                        <a href="#"><i class="fa-brands fa-weibo"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">公司简介</a></li>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#contact">联系方式</a></li>
+                    </ul>                    
+                </div>
+                <div class="footer-col">
+                    <h3>产品系列</h3>
+                    <ul>
+                        <li><a href="#products">光谱分析仪器</a></li>
+                        <li><a href="#products">光纤光谱膜厚检测仪</a></li>                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-map-marker-alt mr-2"></i>
+                            <span>山东省济南市历下区经十路17923号创新大厦</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone mr-2"></i>
+                            <span>18121215738</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            <span>info@rudeertek.com</span>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 姜教授和山科咨询中心的合资公司. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
