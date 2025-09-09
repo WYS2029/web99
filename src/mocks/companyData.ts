@@ -1,11 +1,11 @@
 export const companyInfo = {
-  name: "山科智控传感有限公司",
+  name: "新公司名称待确认",
   englishName: "Shanke Intellisensing Co., Ltd.",
-  fullName: "山科智控传感有限公司",
+  fullName: "新公司名称待确认",
   established: 2025,
   vision: "成为全球领先的工业自动化解决方案提供商，通过技术创新推动产业升级",
   mission: "为客户创造价值，为员工创造机会，为社会创造财富",
-  introduction: "山科智控传感有限公司（Shanke Intellisensing Co., Ltd.）是一家专注于工业自动化和智能控制领域的高新技术企业。公司致力于为各行业提供先进的自动化控制系统、智能传感器和物联网解决方案，帮助客户实现生产过程的智能化、高效化和绿色化。",
+  introduction: "新公司名称待确认（Shanke Intellisensing Co., Ltd.）是一家专注于工业自动化和智能控制领域的高新技术企业。公司致力于为各行业提供先进的自动化控制系统、智能传感器和物联网解决方案，帮助客户实现生产过程的智能化、高效化和绿色化。",
   
   developmentHistory: [
     { year: 2025, event: "公司成立，专注于光谱分析仪器研发与生产" },
